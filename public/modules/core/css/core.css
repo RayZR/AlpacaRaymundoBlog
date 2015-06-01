@@ -108,7 +108,7 @@ p.ref {
 .large-header {
     position: relative;
     width: 100%;
-    background: #333;
+    background-color: transparent;
     overflow: hidden;
     background-size: cover;
     background-position: center center;
@@ -173,9 +173,6 @@ p.ref {
     background: #fd6a62;
 }
 
-.page-6 {
-    background: #f68dbb;
-}
 
 
 

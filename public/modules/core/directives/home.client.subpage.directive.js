@@ -9,13 +9,9 @@ angular.module('core').directive('subPage',function(){
 
                 // Main
 
-            if (scope.$first){
-                console.log('I am first');
                 initHeader();
                 initAnimation();
                 addListeners();
-            }
-
 
             if(scope.$last){
                 (function() {
@@ -63,11 +59,6 @@ angular.module('core').directive('subPage',function(){
                         animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ],
                     // support css animations
                         support = Modernizr.cssanimations;
-
-
-
-
-
 
                     function init() {
 
