@@ -17,6 +17,10 @@ module.exports = {
 				'public/lib/bootstrap/dist/css/bootstrap-theme.css',
 			],
 			js: [
+                'public/lib/modernizr/modernizr.js',
+                'public/lib/jquery/dist/jquery.js',
+                'public/lib/greensock/src/minified/TweenLite.min.js',
+                'public/lib/greensock/src/minified/easing/EasePack.min.js',
 				'public/lib/angular/angular.js',
 				'public/lib/angular-resource/angular-resource.js', 
 				'public/lib/angular-cookies/angular-cookies.js', 
