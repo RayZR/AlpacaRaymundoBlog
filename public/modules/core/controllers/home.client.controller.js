@@ -8,6 +8,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
         $scope.current = 0;
         $scope.pages   = ['intro', 'about', 'skill', 'experience', 'contact'];
 
+            console.log("loaded");
         function DotNav( el, options ) {
             this.nav = el;
             this.options = extend( {}, this.options );
@@ -70,7 +71,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 
         $scope.$watch('current',function(){
 
-            $scope.current
+
         });
 
 

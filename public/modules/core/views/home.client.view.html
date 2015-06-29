@@ -1,14 +1,6 @@
-<section data-ng-controller="HomeController">
-    <div class="dotstyle dotstyle-circlegrow">
-        <ul>
-            <li ng-repeat="page in pages"  home-nav page="{{page}}" index="{{$index}}" ></li>
-        </ul>
-    </div>
 
-    <div id="pt-main" class="pt-perspective">
+<a ui-sref=".intro" class="btn btn-primary">intro</a>
+<a ui-sref=".about" class="btn btn-danger">about</a>
+    <div data-ui-view="nav"></div>
 
-        <div ng-repeat="page in pages"  sub-page ></div>
-
-
-    </div>
-</section>
+    <div data-ui-view="page" ng-class="{back: back}"></div>
