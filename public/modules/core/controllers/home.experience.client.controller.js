@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('core').controller('SkillController', ['$scope', 'Authentication',
+angular.module('core').controller('ExperienceController', ['$scope', 'Authentication',
 	function($scope, Authentication) {
 		// This provides Authentication context.
 		
