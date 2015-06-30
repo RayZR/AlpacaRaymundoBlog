@@ -10,8 +10,6 @@ angular.module('core').controller('IndexController', ['$scope', 'Authentication'
 
         var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
-        console.log("Loaded Index");
-
         initHeader();
         initAnimation();
         addListeners();

@@ -12,7 +12,6 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 
                 var fromPageName = fromState.name.split('.')[1];
                 var toPageName   = toState.name.split('.')[1];
-                console.log(fromState.name + ',' + toState.name);
 
                 if( $scope.pages.indexOf(fromPageName) < $scope.pages.indexOf(toPageName)){
 
@@ -24,6 +23,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 
 
             }else{
+
                 $scope.back = false;
             }
 
