@@ -18,6 +18,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				views: {
 					'nav': {
 						templateUrl: "modules/core/views/home.nav.view.html",
+						params: { pageNum: 1 , pages:['index', 'about', 'skill', 'experience', 'contact']}
 					},
 					'page': {
 						templateUrl: "modules/core/views/home.index.view.html",
@@ -27,23 +28,55 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			})
 			.state('home.about', {
 				url: '/about',
-				template: '<h1>About</h1>',
-				controller: 'HomeController'
+				views: {
+					'nav': {
+						templateUrl: "modules/core/views/home.nav.view.html",
+						params: { pageNum: 2, pages:['index', 'about', 'skill', 'experience', 'contact'] }
+					},
+					'page': {
+						templateUrl: "modules/core/views/home.about.view.html",
+						controller: 'AboutController'
+					}
+				}
 			})
 			.state('home.skill', {
 				url: '/skill',
-				template: '<h1>Skill</h1>',
-				controller: 'HomeController'
+				views: {
+					'nav': {
+						templateUrl: "modules/core/views/home.nav.view.html",
+						params: { pageNum: 3, pages:['index', 'about', 'skill', 'experience', 'contact'] }
+					},
+					'page': {
+						templateUrl: "modules/core/views/home.skill.view.html",
+						controller: 'SkillController'
+					}
+				}
 			})
 			.state('home.experience', {
 				url: '/experience',
-				template: '<h1>Exp</h1>',
-				controller: 'HomeController'
+				views: {
+					'nav': {
+						templateUrl: "modules/core/views/home.nav.view.html",
+						params: { pageNum: 4, pages:['index', 'about', 'skill', 'experience', 'contact'] }
+					},
+					'page': {
+						templateUrl: "modules/core/views/home.experience.view.html",
+						controller: 'ExperienceController'
+					}
+				}
 			})
 			.state('home.contact', {
 				url: '/contact',
-				template: '<h1>Contact</h1>',
-				controller: 'HomeController'
+				views: {
+					'nav': {
+						templateUrl: "modules/core/views/home.nav.view.html",
+						params: { pageNum: 5, pages:['index', 'about', 'skill', 'experience', 'contact'] }
+					},
+					'page': {
+						templateUrl: "modules/core/views/home.contact.view.html",
+						controller: 'ContactController'
+					}
+				}
 			});
 	}
 ]);

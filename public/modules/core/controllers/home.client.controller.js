@@ -6,7 +6,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
         $scope.current = 0;
-        $scope.pages   = ['intro', 'about', 'skill', 'experience', 'contact'];
+        $scope.pages   = ['index', 'about', 'skill', 'experience', 'contact'];
 
             console.log("loaded");
         function DotNav( el, options ) {
