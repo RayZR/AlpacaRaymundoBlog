@@ -1,7 +1,7 @@
-<div class="dotstyle dotstyle-fillup">
+<div class="dotstyle dotstyle-circlegrow">
     <ul>
-        <li ng-repeat="page in pages">
-            <a ui-sref="home.{{page}}">{[ page }}</a>
+        <li ui-sref-active="current"  ng-repeat="page in pages">
+            <a ui-sref="home.{{page}}" >{[ page }}</a>
         </li>
 
     </ul>

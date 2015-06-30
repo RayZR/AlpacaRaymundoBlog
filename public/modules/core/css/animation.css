@@ -22,22 +22,22 @@
     animation: moveFromRight .6s ease both;
 }
 
-.pt-page-moveToTop {
+.ng-leave {
     -webkit-animation: moveToTop .6s ease both;
     animation: moveToTop .6s ease both;
 }
 
-.pt-page-moveFromTop {
+.ng-enter.back {
     -webkit-animation: moveFromTop .6s ease both;
     animation: moveFromTop .6s ease both;
 }
 
-.pt-page-moveToBottom {
+.ng-leave.back {
     -webkit-animation: moveToBottom .6s ease both;
     animation: moveToBottom .6s ease both;
 }
 
-.pt-page-moveFromBottom {
+.ng-enter {
     -webkit-animation: moveFromBottom .6s ease both;
     animation: moveFromBottom .6s ease both;
 }

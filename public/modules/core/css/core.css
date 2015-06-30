@@ -13,16 +13,6 @@
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
 }
-@font-face {
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'codropsicons';
-    src:url('../fonts/codropsicons/codropsicons.eot');
-    src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/codropsicons/codropsicons.woff') format('woff'),
-    url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
-    url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
-}
 
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after { content: ''; display: table; }
@@ -56,7 +46,6 @@ p.ref {
     text-align: center;
     padding: 2em 1em;
 }
-
 
 
 /* Related demos */
@@ -172,9 +161,6 @@ p.ref {
 .page-5 {
     background: #fd6a62;
 }
-
-
-
 
 .no-js body {
     overflow: auto;

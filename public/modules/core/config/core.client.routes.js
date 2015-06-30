@@ -18,7 +18,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				views: {
 					'nav': {
 						templateUrl: "modules/core/views/home.nav.view.html",
-						params: { pageNum: 1 , pages:['index', 'about', 'skill', 'experience', 'contact']}
+						params: { pageNum: 1 }
 					},
 					'page': {
 						templateUrl: "modules/core/views/home.index.view.html",
@@ -31,7 +31,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				views: {
 					'nav': {
 						templateUrl: "modules/core/views/home.nav.view.html",
-						params: { pageNum: 2, pages:['index', 'about', 'skill', 'experience', 'contact'] }
+						params: { pageNum: 2}
 					},
 					'page': {
 						templateUrl: "modules/core/views/home.about.view.html",
@@ -44,7 +44,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				views: {
 					'nav': {
 						templateUrl: "modules/core/views/home.nav.view.html",
-						params: { pageNum: 3, pages:['index', 'about', 'skill', 'experience', 'contact'] }
+						params: { pageNum: 3}
 					},
 					'page': {
 						templateUrl: "modules/core/views/home.skill.view.html",
@@ -57,7 +57,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				views: {
 					'nav': {
 						templateUrl: "modules/core/views/home.nav.view.html",
-						params: { pageNum: 4, pages:['index', 'about', 'skill', 'experience', 'contact'] }
+						params: { pageNum: 4}
 					},
 					'page': {
 						templateUrl: "modules/core/views/home.experience.view.html",
@@ -70,7 +70,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				views: {
 					'nav': {
 						templateUrl: "modules/core/views/home.nav.view.html",
-						params: { pageNum: 5, pages:['index', 'about', 'skill', 'experience', 'contact'] }
+						params: { pageNum: 5}
 					},
 					'page': {
 						templateUrl: "modules/core/views/home.contact.view.html",
