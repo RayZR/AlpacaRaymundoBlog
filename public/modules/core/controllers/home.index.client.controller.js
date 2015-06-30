@@ -6,7 +6,6 @@ angular.module('core').controller('IndexController', ['$scope', 'Authentication'
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
         $scope.current = 1;
-        $scope.pages   = ['intro', 'about', 'skill', 'experience', 'contact'];
 
         var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
