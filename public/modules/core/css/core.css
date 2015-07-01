@@ -250,7 +250,7 @@ div.dotstyle{
 }
 
 
-.dotstyle-circlegrow li a {
+.dotstyle-circlegrow li a .ng-enter{
     overflow: hidden;
     background-color: transparent;
     box-shadow: inset 0 0 0 2px white;
