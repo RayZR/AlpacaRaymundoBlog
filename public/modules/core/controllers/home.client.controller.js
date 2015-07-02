@@ -2,18 +2,20 @@
 
 
 angular.module('core').controller('HomeController', ['$scope', 'Authentication', '$state',
-	function($scope, Authentication, $state) {
+	function($scope, Authentication, $state, $element) {
 
         $scope.pages = ['index', 'about', 'skill', 'experience', 'contact'];
 
+        $scope.back = false;
+
         $scope.$on('$stateChangeStart',  function(event, toState, toParams, fromState, fromParams) {
 
-            if( fromState.name ){
+            if( toState.name && fromState.name){
 
-                var fromPageName = fromState.name.split('.')[1];
-                var toPageName   = toState.name.split('.')[1];
+                var currentStateName = $scope.currentState.name.split('.')[1];
+                var toStateName   = toState.name.split('.')[1];
 
-                if( $scope.pages.indexOf(fromPageName) < $scope.pages.indexOf(toPageName)){
+                if( $scope.pages.indexOf(currentStateName) < $scope.pages.indexOf(toStateName)){
 
                     $scope.back = false;
                 }else{
@@ -21,20 +23,25 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
                     $scope.back = true;
                 }
 
+                if(!$scope.$$phase) {
+
+                    $scope.$apply();
+                }
             }else{
 
                 $scope.back = false;
-            }
 
+                if(!$scope.$$phase) {
+
+                    $scope.$apply();
+                }
+            }
         });
 
+        $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
 
-        $scope.$on('$stateChangeSuccess',
-            function(event, toState, toParams, fromState, fromParams) {
-                $scope.currentState = toState;
-            }
-        );
-
+            $scope.currentState = toState;
+        });
 
         $scope.$on('scrollDown', function(){
 
@@ -46,20 +53,17 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
                 $state.go(nextState);
             }
 
-            console.log('scrollDown');
         });
 
         $scope.$on('scrollUp', function(){
 
             var currentNum  = $scope.pages.indexOf($scope.currentState.name.split('.')[1]);
-            var nextNum     = currentNum - 1 ;
+            var prevNum     = currentNum - 1 ;
 
-            if( nextNum >= 0){
-                var nextState   = 'home.' + $scope.pages[nextNum];
-                $state.go(nextState);
+            if( prevNum >= 0){
+                var prevState   = 'home.' + $scope.pages[prevNum];
+                $state.go(prevState);
             }
-
-            console.log('scrollUp');
 
         });
 
