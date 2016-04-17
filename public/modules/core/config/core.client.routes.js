@@ -17,11 +17,11 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				url: '/',
 				views: {
 					'nav': {
-						templateUrl: "modules/core/views/home.nav.view.html",
+						templateUrl: 'modules/core/views/home.nav.view.html',
 						params: { pageNum: 1 }
 					},
 					'page': {
-						templateUrl: "modules/core/views/home.index.view.html",
+						templateUrl: 'modules/core/views/home.index.view.html',
 						controller: 'IndexController'
 					}
 				}
@@ -30,11 +30,11 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				url: '/about',
 				views: {
 					'nav': {
-						templateUrl: "modules/core/views/home.nav.view.html",
+						templateUrl: 'modules/core/views/home.nav.view.html',
 						params: { pageNum: 2}
 					},
 					'page': {
-						templateUrl: "modules/core/views/home.about.view.html",
+						templateUrl: 'modules/core/views/home.about.view.html',
 						controller: 'AboutController'
 					}
 				}
@@ -43,11 +43,11 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				url: '/skill',
 				views: {
 					'nav': {
-						templateUrl: "modules/core/views/home.nav.view.html",
+						templateUrl: 'modules/core/views/home.nav.view.html',
 						params: { pageNum: 3}
 					},
 					'page': {
-						templateUrl: "modules/core/views/home.skill.view.html",
+						templateUrl: 'modules/core/views/home.skill.view.html',
 						controller: 'SkillController'
 					}
 				}
@@ -56,11 +56,11 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				url: '/experience',
 				views: {
 					'nav': {
-						templateUrl: "modules/core/views/home.nav.view.html",
+						templateUrl: 'modules/core/views/home.nav.view.html',
 						params: { pageNum: 4}
 					},
 					'page': {
-						templateUrl: "modules/core/views/home.experience.view.html",
+						templateUrl: 'modules/core/views/home.experience.view.html',
 						controller: 'ExperienceController'
 					}
 				}
@@ -69,11 +69,11 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				url: '/contact',
 				views: {
 					'nav': {
-						templateUrl: "modules/core/views/home.nav.view.html",
+						templateUrl: 'modules/core/views/home.nav.view.html',
 						params: { pageNum: 5}
 					},
 					'page': {
-						templateUrl: "modules/core/views/home.contact.view.html",
+						templateUrl: 'modules/core/views/home.contact.view.html',
 						controller: 'ContactController'
 					}
 				}

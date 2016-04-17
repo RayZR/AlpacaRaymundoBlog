@@ -13,6 +13,7 @@
         </a>
 	</div>
 	<nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation">
+
 		<ul class="nav navbar-nav" data-ng-if="menu.shouldRender(authentication.user);">
 			<li data-ng-repeat="item in menu.items | orderBy: 'position'" data-ng-if="item.shouldRender(authentication.user);" ng-switch="item.menuItemType" ui-route="{{item.uiRoute}}" class="{{item.menuItemClass}}" ng-class="{active: ($uiRoute)}" dropdown="item.menuItemType === 'dropdown'">
 				<a ng-switch-when="dropdown" class="dropdown-toggle">
@@ -28,13 +29,17 @@
 			</li>
 		</ul>
 
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a href="">Info</a>
+        <ul class="nav navbar-nav navbar-right main-nav">
+			<li>
+                <a href="">About</a>
             </li>
             <li>
                 <a>Blog</a>
             </li>
+			<li><i class="fa fa-facebook-official fa-4" aria-hidden="true"></i></li>
+			<li><i class="fa fa-github-square fa-4" aria-hidden="true"></i></li>
+			<li><i class="fa fa-twitter-square fa-4" aria-hidden="true"></i></li>
+			<li><i class="fa fa-linkedin-square fa-4" aria-hidden="true"></i></li>
         </ul>
 
 		<ul class="nav navbar-nav navbar-right" data-ng-hide="authentication.user">

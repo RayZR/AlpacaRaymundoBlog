@@ -1,11 +1,29 @@
 'use strict';
 
 
-angular.module('core').controller('IndexController', ['$scope', 'Authentication',
-	function($scope, Authentication) {
+angular.module('core').controller('IndexController', ['$scope', 'Authentication', '$timeout',
+	function($scope, Authentication, $timeout) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
         $scope.current = 1;
+
+        $scope.bgText = '';
+
+        var intendedText = 'Hi,I Am Ray.';
+        var intendedTextArray = intendedText.split("");
+        var textLength = intendedTextArray.length;
+
+        for(var numberCounter =0; numberCounter < textLength; numberCounter++){
+
+            $timeout(function(){
+
+                $scope.bgText = $scope.bgText + intendedTextArray.shift();
+
+            }, numberCounter*100);
+
+        }
+
+
 
         var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
@@ -92,7 +110,7 @@ angular.module('core').controller('IndexController', ['$scope', 'Authentication'
                 posx = e.pageX;
                 posy = e.pageY;
             }
-            else if (e.clientX || e.clientY)    {
+            else if (e.clientX || e.clientY) {
                 posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
                 posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
             }
@@ -126,7 +144,7 @@ angular.module('core').controller('IndexController', ['$scope', 'Authentication'
                 ctx.clearRect(0,0,width,height);
                 for(var i in points) {
                     // detect points in range
-                    if(Math.abs(getDistance(target, points[i])) < 4000) {
+                    if(Math.abs(getDistance(target, points[i])) < 8000) {
                         points[i].active = 0.3;
                         points[i].circle.active = 0.6;
                     } else if(Math.abs(getDistance(target, points[i])) < 20000) {
@@ -162,7 +180,7 @@ angular.module('core').controller('IndexController', ['$scope', 'Authentication'
                 ctx.beginPath();
                 ctx.moveTo(p.x, p.y);
                 ctx.lineTo(p.closest[i].x, p.closest[i].y);
-                ctx.strokeStyle = 'rgba(156,217,249,'+ p.active+')';
+                ctx.strokeStyle = 'rgba(102, 102, 102,'+ p.active+')';
                 ctx.stroke();
             }
         }
@@ -181,7 +199,7 @@ angular.module('core').controller('IndexController', ['$scope', 'Authentication'
                 if(!_this.active) return;
                 ctx.beginPath();
                 ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-                ctx.fillStyle = 'rgba(156,217,249,'+ _this.active+')';
+                ctx.fillStyle = 'rgba(102, 102, 102,'+ _this.active+')';
                 ctx.fill();
             };
         }

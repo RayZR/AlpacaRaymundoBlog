@@ -1,7 +1,7 @@
-<div class="dotstyle dotstyle-circlegrow">
+<div class="dotstyle dotstyle-tooltip">
     <ul>
-        <li ui-sref-active="current"  ng-repeat="page in pages">
-            <a ui-sref="home.{{page}}" >{[ page }}</a>
+        <li ui-sref-active="current"  ng-repeat="page in pages"  ui-sref="home.{{page}}">
+            <a class="{{page}}-tooltip" >{{ page }}</a>
         </li>
 
     </ul>
