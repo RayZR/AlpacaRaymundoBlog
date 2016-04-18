@@ -9,20 +9,42 @@ angular.module('core').controller('IndexController', ['$scope', 'Authentication'
 
         $scope.bgText = '';
 
-        var intendedText = 'Hi,I Am Ray.';
-        var intendedTextArray = intendedText.split("");
+        var intendedText = ['Hi,I Am Ray', 'A Programmer.', 'Living In Sydney.'];
+        var intendedTextArray = intendedText[0].split("");
         var textLength = intendedTextArray.length;
 
-        for(var numberCounter =0; numberCounter < textLength; numberCounter++){
+        for(var numberCounter = 0; numberCounter < textLength; numberCounter++){
 
             $timeout(function(){
 
                 $scope.bgText = $scope.bgText + intendedTextArray.shift();
 
-            }, numberCounter*100);
+            }, numberCounter*200);
 
         }
 
+        for(var numberCounter = 0; numberCounter < 3; numberCounter++){
+
+            $timeout(function(){
+
+                $scope.bgText = $scope.bgText.slice(0, -1);
+
+            }, textLength*200 + numberCounter*100);
+
+        }
+
+        intendedTextArray = intendedText[1].split("");
+        var ntextLength = intendedTextArray.length;
+
+        for(var numberCounter = 0; numberCounter < ntextLength; numberCounter++){
+
+            $timeout(function(){
+
+                $scope.bgText = $scope.bgText + intendedTextArray.shift();
+
+            }, textLength*200 + 3*100 +numberCounter*200);
+
+        }
 
 
         var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
